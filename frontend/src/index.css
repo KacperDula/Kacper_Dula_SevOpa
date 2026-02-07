@@ -1,0 +1,214 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #1f2933;
+  background-color: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #f5f7fb;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: white;
+  border-bottom: 1px solid #e4e7ec;
+  flex-wrap: wrap;
+}
+
+.app-header nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.app-header nav a.active {
+  font-weight: 600;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.auth-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.auth-actions a.secondary {
+  color: #1f2933;
+}
+
+.auth-actions button,
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.auth-actions button,
+button {
+  border: none;
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.secondary {
+  background-color: #e2e8f0;
+  color: #1f2933;
+}
+
+button.danger {
+  background-color: #dc2626;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 40, 0.08);
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.95rem;
+  gap: 0.25rem;
+}
+
+input,
+select,
+textarea {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #d5dae1;
+  background-color: #fdfdfd;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+.error {
+  color: #dc2626;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.status.scheduled {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.status.completed {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.status.cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-main {
+    padding: 1rem;
+  }
+
+  .form-actions,
+  .auth-actions,
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
