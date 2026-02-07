@@ -1,63 +1,83 @@
-Booking Management Dashboard
+📅 Booking Management Dashboard
 
-A simple full-stack booking system with a Spring Boot backend, React frontend, and PostgreSQL database.
+A full-stack booking management platform built with a Spring Boot backend and a React (Vite) frontend.
+The application runs fully locally using PostgreSQL and supports the complete booking flow from authentication to service management.
 
-What It Does
+✨ Features
 
-Users can register and log in
+🔐 Secure REST API
+Spring Boot 3.2 with JWT authentication, BCrypt password hashing, and role-based access (admin / user).
 
-Users can view services and create bookings
+🛠️ Service & Booking Management
 
-Users can update or cancel their bookings
+Admins manage services (create, update, delete)
 
-Admins can manage services and view all bookings
+Users create, update, cancel, and view their bookings
 
-Tech Stack
+🗄️ PostgreSQL + Flyway
+Automatic database migrations with seed data (default admin + example services).
 
-Backend: Java 21, Spring Boot, Spring Security
+📘 Swagger API Docs
+Interactive API documentation available at:
+http://localhost:8080/swagger-ui/index.html
 
-Frontend: React (Vite), Axios
+💻 React Dashboard
+Built with Vite, React Router, and Axios. Includes protected routes and a responsive layout.
 
-Database: PostgreSQL, Flyway
-
-Requirements
+🧰 Tech Stack
+Layer	Technologies
+Backend	Java 21, Spring Boot 3.2, Spring Security, JPA, Hibernate
+Frontend	React (Vite), React Router, Axios
+Database	PostgreSQL, Flyway
+📋 Requirements
 
 Java 21
 
-Maven
+Maven 3.9+
 
-Node.js (18+)
+Node.js 18+
 
-PostgreSQL
+PostgreSQL (running locally)
 
-How to Run
-Backend
+📁 Project Structure
+Kacper_SevOpa/
+├── backend/      # Spring Boot API
+├── frontend/     # React dashboard
+├── README.md
+
+⚙️ Setup & Installation
+1️⃣ Backend
+cd backend
+mvn clean package
+
+2️⃣ Database
+CREATE DATABASE booking_db;
+CREATE USER booking WITH PASSWORD 'booking';
+GRANT ALL PRIVILEGES ON DATABASE booking_db TO booking;
+
+3️⃣ Frontend
+cd frontend
+npm install
+
+▶️ Running the Application
+Start Backend
 cd backend
 mvn spring-boot:run
 
-Frontend
-cd frontend
-npm install
-npm run dev
 
+API: http://localhost:8080
 
-Backend: http://localhost:8080
+Swagger: http://localhost:8080/swagger-ui/index.html
 
-Frontend: http://localhost:5173
-
-Default admin
+Default admin account
 
 Username: admin
 
 Password: AdminPass123!
 
-API Docs
+Start Frontend
+cd frontend
+npm run dev
 
-Swagger UI:
-http://localhost:8080/swagger-ui/index.html
 
-Notes
-
-Database and security settings are in application.yml
-
-Frontend API URL can be set in frontend/.env
+Frontend: http://localhost:5173
