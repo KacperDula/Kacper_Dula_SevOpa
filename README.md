@@ -36,12 +36,6 @@ Node.js 18+
 
 PostgreSQL (running locally)
 
-Project Structure
-Kacper_SevOpa/
-├── backend/      # Spring Boot API
-├── frontend/     # React dashboard
-├── README.md
-
 Setup and Installation
 Backend
 cd backend
